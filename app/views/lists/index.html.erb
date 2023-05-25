@@ -1,0 +1,13 @@
+<%= render "banner" %>
+<div class="container">
+  <div class="row align-items-center my-4">
+    <div class="col-6">
+      <h1>My lists</h1>
+    </div>
+    <div class="col-6 text-end">
+      <%= link_to "Create a movie list", new_list_path(@list), class:"btn btn-success text-white" %>
+    </div>
+  </div>
+</div>
+
+<%= render "cards" %>

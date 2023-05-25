@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row">
+    <div class="cards">
+      <% @lists.each do |list| %>
+        <%= link_to list.name, list_path(list), class:"card-category col-12 text-decoration-none" %>
+      <% end %>
+    </div>
+  </div>
+</div>

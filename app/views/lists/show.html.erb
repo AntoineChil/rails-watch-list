@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row my-4">
+    <div class="col">
+      <h1><%= @list.name.upcase %></h1>
+    </div>
+  </div>
+  <div class="row justify-content-conter mb-5">
+    <% @list.bookmarks.each do |bookmark| %>
+    <div class="col-4">
+      <div class="card shadow" style="width: 24rem;">
+        <%= image_tag bookmark.movie.poster_url, alt: "Movie poster", class: "card-img-top" %>
+        <div class="card-body">
+          <p class="card-title"><strong><%= bookmark.movie.title %></strong> | <%= bookmark.movie.rating %> <i
+              class="fa-solid fa-star text-warning"></i></p>
+          <p class="card-text"><%= bookmark.comment %></p>
+          <%= link_to "Delete",  bookmark_path(bookmark), class: "btn btn-outline-danger",
+                data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <div class="row bg-white p-5 mb-5">
+    <div class="col">
+      <h2>Add a bookmark</h2>
+      <%= simple_form_for [@list, @bookmark] do |f| %>
+      <%= f.association :movie, prompt: "Choose a movie" %>
+      <%= f.input :comment, placeholder: "ex: Best movie I've ever see" %>
+      <%= f.submit "Submit bookmark", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
