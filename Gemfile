@@ -50,6 +50,7 @@ gem "sassc-rails"
 gem "rest-client"
 gem "dotenv-rails"
 gem "cloudinary"
+gem "favicon-ruby", "~>0.1"
 
 # Use Sass to process CSS
 # gem "sassc-rails"
