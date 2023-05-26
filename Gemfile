@@ -47,6 +47,8 @@ gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form"
 gem "sassc-rails"
+gem "rest-client"
+gem "dotenv-rails"
 
 # Use Sass to process CSS
 # gem "sassc-rails"
