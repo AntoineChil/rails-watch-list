@@ -2,7 +2,8 @@
   <div class="row">
     <div class="cards">
       <% @lists.each do |list| %>
-        <%= link_to list.name, list_path(list), class:"card-category col-12 text-decoration-none" %>
+        <%= link_to list.name, list_path(list), class:"card-category col-12 text-decoration-none",
+            style:"background-image: url('#{cl_image_path list.photo.key}')" %>
       <% end %>
     </div>
   </div>
