@@ -19,14 +19,17 @@
     </div>
     <% end %>
   </div>
-  <div class="row bg-white p-5 mb-5">
-    <div class="col">
+  <div class="row">
+    <div class="col bg-white p-5 my-5">
       <h2>Add a bookmark</h2>
       <%= simple_form_for [@list, @bookmark] do |f| %>
       <%= f.association :movie, prompt: "Choose a movie" %>
       <%= f.input :comment, placeholder: "ex: Best movie I've ever see" %>
       <%= f.submit "Submit bookmark", class: "btn btn-primary" %>
       <% end %>
+    </div>
+    <div class="col bg-white p-5 m-5">
+      <h2>Review</h2>
     </div>
   </div>
 </div>
