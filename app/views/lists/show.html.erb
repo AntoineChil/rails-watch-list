@@ -1,8 +1,8 @@
-<%= render "banner-show" %>
+<%= render "lists/banner-show" %>
 <div class="container">
   <div class="row justify-content-conter my-5">
     <% @list.bookmarks.each do |bookmark| %>
-    <div class="col-4">
+    <div class="col-4 my-4">
       <div class="card shadow" style="width: 24rem;">
         <%= image_tag bookmark.movie.poster_url, alt: "Movie poster", class: "card-img-top" %>
         <div class="card-body">
